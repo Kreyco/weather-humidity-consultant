@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    <h1>Dashboard</h1>
+    <p>These are your favorites Cities saved!</p>
+
+    {% for city in cities %}
+        <div class="card-box">
+            <div class="header">
+                <div class="title">
+                    <span>{{ city.name }} </span>
+                </div>
+            </div>
+            <div class="content">
+                <!-- item -->
+                <div class="item">
+                    <div class="bottom">
+                        <div class="left">
+                            <span>Weather:</span>
+                            <p>{{ city.weather|default('0 C°') }}</p>
+                        </div>
+                        <div class="right">
+                            <span>Humidity:</span>
+                            <p>{{ city.humidity|default('0%') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
