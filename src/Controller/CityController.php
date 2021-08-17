@@ -26,8 +26,6 @@ class CityController extends AbstractController
    */
   public function createCity(EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
   {
-//    $entityManager = $this->getDoctrine()->getManager();
-
     $city = new City();
     $city->setName('Miami');
 
