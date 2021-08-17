@@ -6,134 +6,12 @@ $blue: #1976d2;
 $lightBlue: #489aea;
 $white: #fff;
 
-//.navbar-expand-lg {
-//  flex-wrap: nowrap;
-//  justify-content: flex-start;
-//}
-//
-//.d-lg-none {
-//  display: none !important;
-//}
-//
-//.navbar-expand-lg .navbar-collapse {
-//  display: flex !important;
-//  flex-basis: auto;
-//}
-//
-//.collapse:not(.show) {
-//  display: none;
-//}
-//
-//.navbar-collapse {
-//  flex-basis: 100%;
-//  flex-grow: 1;
-//  align-items: center;
-//}
-
-//.navbar {
-//  position: relative;
-//  display: flex;
-//  flex-wrap: wrap;
-//  align-items: center;
-//  justify-content: space-between;
-//  padding-top: 1.5rem;
-//  padding-right: 1rem;
-//  padding-bottom: 1.5rem;
-//  padding-left: 1rem;
-//
-//  &.navbar-light .navbar-brand {
-//    color: #0A2463;
-//  }
-//
-//  .text-decoration-none {
-//    text-decoration: none !important;
-//  }
-//
-//  .navbar-brand {
-//    padding-top: .40625rem;
-//    padding-bottom: .40625rem;
-//    margin-right: 1rem;
-//    font-size: 1.125rem;
-//    text-decoration: none;
-//    white-space: nowrap;
-//  }
-//
-//  &.navbar-light {
-//    background-color: $bgDefault;
-//    border-color: $bgHighlight;
-//  }
-//
-//  & > .container, & > .container-fluid, & > .container-sm, & > .container-md, & > .container-lg, & > .container-xl {
-//    display: flex;
-//    flex-wrap: inherit;
-//    align-items: center;
-//    justify-content: space-between;
-//  }
-//
-//  ul {
-//    .navbar-nav {
-//      display: flex;
-//      flex-direction: column;
-//      padding-left: 0;
-//      margin-bottom: 0;
-//      list-style: none;
-//
-//      list-style-type: none;
-//      margin: 0;
-//      padding: 0;
-//      overflow: hidden;
-//      background-color: #333;
-//
-//      li {
-//        float: left;
-//
-//        a {
-//          display: inline-block;
-//          color: white;
-//          text-align: center;
-//          padding: 14px 16px;
-//          text-decoration: none;
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//.ms-auto {
-//  margin-left: auto !important;
-//}
-//
-//.me-4 {
-//  margin-right: 1rem !important;
-//}
-//
-//ol, ul, dl {
-//  margin-top: 0;
-//  margin-bottom: 1rem;
-//}
-//
-//.navbar-expand-lg .navbar-nav .nav-link {
-//  padding-right: 1.5rem;
-//  padding-left: 1.5rem;
-//}
-
-//.nav-link {
-//  display: block;
-//  padding: .5rem 1rem;
-//  font-size: .875rem;
-//  font-weight: 500;
-//  color: #FF4564;
-//  text-decoration: none;
-//  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-//}
-
 .header {
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   padding: 10px 20px;
-  //z-index: 1300;
   z-index: 190;
   display: flex;
   align-items: center;
@@ -178,7 +56,6 @@ $white: #fff;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    //background-color: #333;
 
     li {
       float: left;
