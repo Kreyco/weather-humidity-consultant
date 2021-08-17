@@ -1,3 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+  path: /
+  controller: App\Controller\DashboardController::index
+
+city_index:
+  path: /city
+  controller: App\Controller\CityController::index

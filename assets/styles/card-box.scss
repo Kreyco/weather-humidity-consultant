@@ -1,0 +1,109 @@
+$blueTitle: #0481f9;
+
+.card-box {
+  width: 40rem;
+  height: 18rem;
+  background-color: #fff;
+  display: inline-block;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 14%);
+  margin: .5rem;
+  border-radius: .5rem;
+
+  .card-box__header {
+    width: 100%;
+    height: 3.5rem;
+    display: block;
+    float: left;
+    color: $blueTitle;
+    line-height: 1.8;
+    vertical-align: bottom;
+    padding: .4rem;
+    padding-top: .2rem;
+    padding-left: 1rem;
+    border-bottom: .0625rem #f0f0f1 solid;
+
+    .card-box__header__title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #444;
+      height: 2rem;
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+
+  .card-box__content {
+    height: 14.5rem;
+    width: 100%;
+    display: block;
+    float: left;
+
+    .card-box__content__item {
+      width: auto;
+      margin: 0 .8rem;
+      margin-top: .4rem;
+      display: block;
+      height: 5.37313433rem;
+      font-size: 1.2rem;
+      border-bottom-width: .04375rem;
+      border-bottom-color: #f0f0f1;
+      border-bottom-style: solid;
+
+      .card-box__content__item__title {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        height: 35%;
+      }
+
+      .card-box__content__item__bottom {
+        display: block;
+        width: 100%;
+        height: 60%;
+
+        .left, .right {
+          font-size: 1.1rem;
+          font-weight: 600;
+          text-align: left;
+
+          & > p, & > p {
+            font-size: 1.1rem;
+            text-align: left;
+            margin-bottom: 0;
+            font-weight: 500;
+          }
+        }
+
+        .left {
+          display: inline-block;
+          width: 49%;
+          height: 99%;
+          vertical-align: top;
+        }
+
+        .right {
+          display: inline-block;
+          width: 49%;
+          height: 99%;
+          vertical-align: top;
+          //text-align: right;
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 2.5rem;
+    width: auto;
+    margin: .4rem;
+    margin-left: .8rem;
+    display: block;
+    background-color: transparent;
+    border-width: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #757575;
+  }
+}
