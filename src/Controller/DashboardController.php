@@ -17,13 +17,12 @@ class DashboardController extends AbstractController
     {
       $entityManager = $this->getDoctrine()->getManager();
       $cities = $entityManager->getRepository(City::class)
-        ->findAll();
+        ->findAllCitiesServiceIdToOneStep();
 
-      $citiesInfo = $openWeather->fetchWeatherInformation();
+      $citiesInfo = $openWeather->fetchWeatherInformation($cities);
       $citiesInfo = isset($citiesInfo['list']) ? $citiesInfo['list'] : $citiesInfo;
 
       return $this->render('dashboard/index.html.twig', [
-        'cities' => $cities,
         'citiesInfo' => $citiesInfo
       ]);
     }

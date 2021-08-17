@@ -13,12 +13,13 @@ class OpenWeather
     $this->client = $client;
   }
 
-  public function fetchWeatherInformation(): array
+  public function fetchWeatherInformation(array $citiesId): array
   {
+    $id = is_array($citiesId) ? implode(",", $citiesId) : "4164138,3687925,3668605";
     $content = [];
     $response = $this->client->request("GET", "https://api.openweathermap.org/data/2.5/group", [
       'query' => [
-        'id'    => '4164138,3687925,3668605',
+        'id'    => $id,
         'appid' => 'cddc707c8c7a69e3f485c90860e31c7c',
         'units' => 'metric'
       ]

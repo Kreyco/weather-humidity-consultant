@@ -14,37 +14,30 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class CityRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+  public function __construct (ManagerRegistry $registry)
+  {
+    parent::__construct($registry, City::class);
+  }
+
+  public function findAllCitiesServiceId (): ?array
+  {
+    return $this->createQueryBuilder('c')
+      ->select('c.city_service_id')
+      ->orderBy('c.id', 'ASC')
+      ->getQuery()
+      ->getArrayResult();
+  }
+
+  public function findAllCitiesServiceIdToOneStep (): ?array
+  {
+    $result = [];
+    $cities = $this->findAllCitiesServiceId();
+
+    foreach ($cities as $city)
     {
-        parent::__construct($registry, City::class);
+      $result[] = $city["city_service_id"];
     }
 
-    // /**
-    //  * @return City[] Returns an array of City objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?City
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
+    return $result;
+  }
 }
