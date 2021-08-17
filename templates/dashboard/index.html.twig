@@ -4,11 +4,11 @@
     <h1>Dashboard</h1>
     <p>These are your favorites Cities saved!</p>
 
-    {% for city in cities %}
+    {% for cityInfo in citiesInfo %}
         <div class="card-box">
             <div class="card-box__header">
                 <div class="card-card-box__header__title">
-                    <h4>{{ city.name }} </h4>
+                    <h4>{{ cityInfo.name }} </h4>
                 </div>
             </div>
             <div class="card-box__content">
@@ -17,17 +17,16 @@
                     <div class="card-box__content__item__bottom">
                         <div class="left">
                             <span>Weather:</span>
-                            <p>{{ city.weather|default('0 C°') }}</p>
+                            <p>{{ cityInfo.main.temp|temperature }}</p>
                         </div>
                         <div class="right">
                             <span>Humidity:</span>
-                            <p>{{ city.humidity|default('0%') }}</p>
+                            <p>{{ cityInfo.main.humidity|humidity }}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="footer">
-
             </div>
         </div>
     {% endfor %}
